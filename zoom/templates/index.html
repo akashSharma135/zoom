@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+    <form action="https://zoom.us/oauth/authorize?response_type=code&client_id=6DwBK0CyTuWMqXOpuwRheQ&redirect_uri=http://127.0.0.1:8000/zoom/callback/" method="get">
+        <input id="btn" type="button" value="Sign In">
+    </form>
+</body>
+</html>
+
+<script>
+    document.addEventListener('click', () => {
+        console.log(window.location.origin)
+        window.location.href = "https://zoom.us/oauth/authorize?response_type=code&client_id=6DwBK0CyTuWMqXOpuwRheQ&redirect_uri=http://127.0.0.1:8000/zoom/callback/"
+    })
+</script>
